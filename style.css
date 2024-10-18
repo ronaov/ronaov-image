@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Francois One", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #131313;
+}
+
+#top {
+  text-align: center;
+  font-size: 25px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+button {
+  width: 40%;
+  height: 30px;
+  margin: 2% 5%;
+  border: 2px solid white;
+  background: #131313;
+  color: white;
+  border-radius: 50px;
+  transition: 0.1s;
+}
+
+button:active {
+  background: white;
+  color: #131313;
+  transform: scale(0.9);
+}

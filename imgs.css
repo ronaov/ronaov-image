@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Francois One", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #131313;
+}
+
+#top {
+  text-align: center;
+  font-size: 25px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+#img {
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+p {
+  color: white;
+  text-align: center;
+}
