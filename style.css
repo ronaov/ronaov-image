@@ -10,11 +10,22 @@ body {
 }
 
 #top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   font-size: 25px;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #131313;
   color: white;
   font-weight: 700;
+  z-index: 1;
+}
+
+#mh {
+  position: relative;
+  top: 70px;
 }
 
 button {
