@@ -1,7 +1,7 @@
 *{
   padding: 0;
   margin: 0;
-  font-family: "Francois One", sans-serif;
+  font-family: "Baloo Paaji 2", sans-serif;
   box-sizing: border-box;
 }
 
@@ -12,9 +12,9 @@ body {
 #top {
   text-align: center;
   font-size: 25px;
-  backdrop-filter: blur(20px);
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: white;
+  font-weight: 700;
 }
 
 button {
@@ -32,4 +32,42 @@ button:active {
   background: white;
   color: #131313;
   transform: scale(0.9);
+}
+
+#btn {
+  width: 50px;
+  height: 25px;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-right: 3px;
+}
+
+#on {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 25px;
+  position: relative;
+  top: -2px;
+
+}
+
+#phim {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: left;
+  margin-left: 3px;
+  width: 120px;
+  transition: 0.25s;
+}
+
+p.fade {
+  opacity: 0;
 }

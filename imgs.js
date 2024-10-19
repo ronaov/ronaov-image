@@ -1,5 +1,6 @@
 var urlParams = new URLSearchParams(window.location.search);
 var id = urlParams.get('id');
+var mode = urlParams.get('mode')
 
 var tittle = document.getElementById("tittle")
 tittle.textContent = id
@@ -32,8 +33,13 @@ for (var i = hero; i < hero + 26; i++) {
   a.setAttribute("src", "https://dl.ops.kgtw.garenanow.com/CHT/HeroTrainingLoadingNew_B36/" + new_id +".jpg")
   function kt(a, f){
     a.onerror = function() {
-      a.remove()
-      f.remove()
+      if (mode == "true") {
+        a.src = "None.jpg"
+      }
+      else {
+        a.remove()
+        f.remove()
+      }
     }
   }
   kt(a, f)
