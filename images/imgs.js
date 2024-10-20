@@ -67,7 +67,7 @@ for (var i = hero; i < hero + 26; i++) {
     a.onload = function() {
       a.style.border = "1px solid #fff"
       w.onclick = function () {
-        window.location.href = '/view-img'
+        window.location.href = 'view-img'
         localStorage.setItem('link', a.src)
       }
     }
