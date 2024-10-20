@@ -16,21 +16,39 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: white;
   font-weight: 700;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 img {
-  width: 100%;
+  width: 90%;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 0;
   border: 1px solid white;
+  position: relative;
+  
 }
 
 #img {
+  margin-top: 10%;
   padding: 0 20px;
-  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 p {
   color: white;
-  text-align: center;
+}
+
+i {
+  font-size: 30px;
+  position: absolute;
+  top: 16%;
+  left: 10px;
+}
+
+i:active {
+  color: red;
 }
