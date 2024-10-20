@@ -54,7 +54,7 @@ for (var i = hero; i < hero + 26; i++) {
     a.setAttribute("src", g.src)
   }
   
-  function kt(a, f){
+  function kt(a, f, w){
     a.onerror = function() {
       if (!mode) {
         a.remove()
@@ -66,9 +66,13 @@ for (var i = hero; i < hero + 26; i++) {
     }
     a.onload = function() {
       a.style.border = "1px solid #fff"
+      w.onclick = function () {
+        window.location.href = '/view-img'
+        localStorage.setItem('link', a.src)
+      }
     }
   }
-  kt(a, f)
+  kt(a, f, w)
 }
 
 function backk() {
