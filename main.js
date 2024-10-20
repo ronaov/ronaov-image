@@ -42,8 +42,8 @@ for (var id of ids) {
   var d = document.createElement("button")
   d.textContent = id
   d.onclick = function () {
-    var b = this.textContent
-    window.location.href = "imgs.html?id=" + encodeURIComponent(b)
+    window.location.href = "images"
+    localStorage.setItem('id', this.textContent)
   }
   s.appendChild(d)
 }
@@ -142,6 +142,7 @@ function timkiem() {
       top: 0,
       behavior: 'smooth'
     })
+    ip.focus()
   }
   else {
     ip.style.transform = "scale(0)"
@@ -154,10 +155,20 @@ function timkiem() {
     setTimeout(function() {
       ttk.classList.add("dong")
     }, 300)
+    
+    var tong = document.querySelectorAll('#mh button')
+    for (var x of tong) {
+      x.style.display = 'inline-block'
+    ip.value = ""
+    }
   }
 }
 
 function tim() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
   var gtt = ip.value.toLowerCase()
   var tong = document.querySelectorAll('#mh button')
   for (var x of tong) {

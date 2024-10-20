@@ -187,3 +187,8 @@ button .an {
 .i1 {
   display: flex;
 }
+
+audio {
+  position: fixed;
+  z-index: 5;
+}
