@@ -35,7 +35,6 @@ for (var i = hero; i < hero + 26; i++) {
   var f = document.createElement("p")
   f.textContent = String(i)
   w.appendChild(a)
-  if (mode1) w.appendChild(f);
   if (mode2) w.style.maxWidth = "50%";
   else w.style.maxWidth = "100%";
   w.style.textAlign = "center"
@@ -65,6 +64,7 @@ for (var i = hero; i < hero + 26; i++) {
       }
     }
     a.onload = function() {
+      if (mode1) w.appendChild(f);
       a.style.border = "1px solid #fff"
       w.onclick = function () {
         window.location.href = 'view-img'
