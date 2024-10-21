@@ -1,4 +1,5 @@
-var id = localStorage.getItem('id')
+const urlp = new URLSearchParams(window.location.search)
+var id = urlp.get('id')
 var mode = localStorage.getItem('mode')
 var mode1 = localStorage.getItem('mode1')
 var mode2 = localStorage.getItem('mode2')
@@ -10,7 +11,7 @@ var tittle = document.getElementById("tittle")
 tittle.textContent = id
 
 var fg = ["10600_B36", "10700_B36", "10800_B40", "10900_B36", "15300_B42", "15600_B36", "16600_B36", "17400_B42", "18400_B37", "19000_B41", "50100_B36", "51400_B36"]
-var ide = id.substring(0, 3) + "00"
+var ide = id + "00"
 var bl = false
 
 var num = 0
@@ -26,7 +27,7 @@ var g = new Image()
 g.src = "https://dl.ops.kgtw.garenanow.com/CHT/HeroTrainingLoadingNew_B36/" + fg[num] +".jpg"
 
 var d = document.getElementById("img")
-var hero = parseInt(id.substring(0,3) + "00")
+var hero = parseInt(id + "00")
 for (var i = hero; i < hero + 26; i++) {
   var new_id = String(i)
   
@@ -67,8 +68,11 @@ for (var i = hero; i < hero + 26; i++) {
       if (mode1) w.appendChild(f);
       a.style.border = "1px solid #fff"
       w.onclick = function () {
-        window.location.href = 'view-img'
-        localStorage.setItem('link', a.src)
+        var K = a.src
+        var K1 = K.indexOf('6')+2
+        var K2 = K.indexOf('.jpg')
+        var idskin = K.substring(K1, K2)
+        window.location.href = 'view-img/?id=' + encodeURIComponent(idskin)
       }
     }
   }

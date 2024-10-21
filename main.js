@@ -41,9 +41,9 @@ var s = document.getElementById("mh")
 for (var id of ids) {
   var d = document.createElement("button")
   d.textContent = id
-  d.onclick = function () {
-    window.location.href = "images"
-    localStorage.setItem('id', this.textContent)
+  d.onclick = function() {
+    var Q = this.textContent.substring(0, 3);
+    window.location.href = "images/?id=" + encodeURIComponent(Q);
   }
   s.appendChild(d)
 }
