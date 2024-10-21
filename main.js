@@ -129,15 +129,11 @@ const mh = document.getElementById('mh')
 const ip = document.getElementById('input')
 function timkiem() {
   if (fd.classList.contains('bx-search')) {
-    ttk.classList.remove("dong")
     fd.classList.remove('bx-search')
     fd.classList.add("bx-x-circle")
     fd.style.color = "red"
     mh.style.transform = "translateY(40px)"
-    setTimeout(function() {
-      ttk.style.transform = "translateY(0)"
-      ip.style.transform = "scale(1)"
-    }, 1)
+    ttk.style.transform = "translateY(0)"
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -145,17 +141,11 @@ function timkiem() {
     ip.focus()
   }
   else {
-    ip.style.transform = "scale(0)"
     fd.classList.add('bx-search')
     fd.classList.remove("bx-x-circle")
     fd.style.color = "white"
     mh.style.transform = "translateY(0)"
     ttk.style.transform = "translateY(-200%)"
-    
-    setTimeout(function() {
-      ttk.classList.add("dong")
-    }, 300)
-    
     var tong = document.querySelectorAll('#mh button')
     for (var x of tong) {
       x.style.display = 'inline-block'
