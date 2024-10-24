@@ -35,7 +35,7 @@ img {
 #img {
   margin-top: 10%;
   padding: 0 20px;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
 }
 
