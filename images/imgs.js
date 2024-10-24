@@ -82,3 +82,11 @@ for (var i = hero; i < hero + 26; i++) {
 function backk() {
   window.history.back()
 }
+
+
+window.onload = function () {
+  const loading = document.getElementById('loading')
+  const img = document.getElementById('img')
+  loading.style.display = 'none'
+  img.style.display = 'flex'
+}
